@@ -74,12 +74,12 @@ def main():
 	print (graph)
 
 	flow_matrix = create_flow_network(graph)
-	draw_graph(numV, flow_matrix, "flow.png")
+	draw_graph(numV, flow_matrix, "original_flow.png")
 
 	flow_graph, flow = tarjan.getFlow(2*numV+2, 0, 2*numV+1, flow_matrix)
 	print (flow)
 
-	draw_graph(numV, flow_graph, "flow_graph.png")
+	draw_graph(numV, flow_graph, "found_flow.png")
 
 
 if __name__ == "__main__":
